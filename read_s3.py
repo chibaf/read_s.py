@@ -19,17 +19,12 @@ def read_s(ser):
 #  num=float(nums1[0],nums1[1],nums1[2])
   return(num)
 def close_s(ser):
-  ser.close
+  serclose
   
-#ser = serial.Serial(
-#    port=strPort,\
-#    baudrate=sys.argv[2],\
-#    parity=serial.PARITY_NONE,\
-#    stopbits=serial.STOPBITS_ONE,\
-#    bytesize=serial.EIGHTBITS,\
-#        timeout=0)
 ser=open_s(sys.argv[1],sys.argv[2])
 
 while True:
   num=read_s(ser)
   print(num)
+  
+close(ser)
