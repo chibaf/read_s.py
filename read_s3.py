@@ -1,4 +1,4 @@
-import serial, sys, time, struct
+import serial, sys, time
 
 def open_s(port,bps):
   ser=serial.Serial(port, bps)
