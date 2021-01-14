@@ -17,7 +17,8 @@ def read_s(ser):
     num=[0.0,0.0,0.0]
   return(num)
 def close_s(ser):
-  serclose
+  ser.close()
+  return
   
 ser=open_s(sys.argv[1],sys.argv[2])
 
@@ -29,4 +30,4 @@ while True:
     print("exiting")
     break
   
-close(ser)
+close_s(ser)
