@@ -14,9 +14,7 @@ def read_s(ser):
     num2=nums[2].strip().decode('utf-8')
     num=[float(num0),float(num1),float(num2)]
   else:
-    num0=nums[0].strip().decode('utf-8')
-    num=[float(num0),0.0,0.0]
-#  num=float(nums1[0],nums1[1],nums1[2])
+    num=[0.0,0.0,0.0]
   return(num)
 def close_s(ser):
   serclose
@@ -24,7 +22,11 @@ def close_s(ser):
 ser=open_s(sys.argv[1],sys.argv[2])
 
 while True:
-  num=read_s(ser)
-  print(num)
+  try:
+    num=read_s(ser)
+    print(num)
+  except KeyboardInterrupt:
+    print("exiting")
+    break
   
 close(ser)
