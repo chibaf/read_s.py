@@ -20,7 +20,9 @@ def close_s(ser):
   ser.close()
   return
   
-ser=open_s(sys.argv[1],sys.argv[2])
+  
+# how to use
+ser=open_s(sys.argv[1],sys.argv[2])  # port name, bps
 
 while True:
   try:
