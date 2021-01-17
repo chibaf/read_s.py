@@ -22,7 +22,6 @@ def close_s(ser):
   
 # how to use
 ser=open_s(sys.argv[1],sys.argv[2])  # port name, bps
-
 while True:
   try:
     num=read_s(ser)
@@ -30,5 +29,4 @@ while True:
   except KeyboardInterrupt:
     print("exiting")
     break
-  
 close_s(ser)
