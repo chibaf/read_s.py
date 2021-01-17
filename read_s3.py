@@ -1,9 +1,8 @@
-import serial, sys, time
+import serial, sys
 
 def open_s(port,bps):
   ser=serial.Serial(port, bps)
   print("connected to: " + ser.portstr)
-#  time.sleep(1)
   return(ser)
 def read_s(ser):
   line=ser.readline()
@@ -15,7 +14,6 @@ def read_s(ser):
     num=[float(num0),float(num1),float(num2)]
   else:
     num=[0.0,0.0,0.0]
-  time.sleep(1)
   return(num)
 def close_s(ser):
   ser.close()
